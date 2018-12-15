@@ -13,14 +13,14 @@ $(function(){
 
   $('#form').bootstrapValidator({
 
-    //1. 指定校验时的图标显示，默认是bootstrap风格
+    //指定校验时的图标显示，默认是bootstrap风格
   feedbackIcons: {
     valid: 'glyphicon glyphicon-ok',
     invalid: 'glyphicon glyphicon-remove',
     validating: 'glyphicon glyphicon-refresh'
   },
 
-     //2. 指定校验字段
+     //1. 指定校验字段
      fields:{
       //校验用户名，对应name表单的name属性
       username:{
@@ -62,7 +62,7 @@ $(function(){
    })
 
 
-    //3.注册表单校验成功事件，在校验成功时，会触发
+    //2.注册表单校验成功事件，在校验成功时，会触发
     // 在事件中阻止默认的提交（会跳转），通过ajax进行提交（异步）
    $('#form').on('success.form.bv',function(e){
     //  阻止默认的提交
@@ -84,6 +84,7 @@ $(function(){
               location.href="index.html";
             }
             if(info.error === 1000){
+              // 3.更新状态
               $('#form').data('bootstrapValidator').updateStatus('username',"INVALID","callback")
             }
             if(info.error === 1001){
