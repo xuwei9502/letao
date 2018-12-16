@@ -23,14 +23,15 @@
   <!-- 导航 -->
   <div class='nav'>
     <ul>  
-      <li><a href="user.html" class="current"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
-      <li class='category'><a href="javascipt:;"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
-          <div class="child" >
-            <a href="first.html">一级分类</a>
-            <a href="second.html">二级分类</a>
+      <li><a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+      <li class='category'>
+        <a href="javascipt:;"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
+          <div class="child"  style="display:block">
+            <a href="first.html"  >一级分类</a>
+            <a href="second.html" class="current">二级分类</a>
           </div>
       </li>
-      <li> <a href="product.html"><i class='glyphicon glyphicon-tags'></i><span>商品管理</span></li>
+      <li > <a href="product.html"><i class='glyphicon glyphicon-tags'></i><span>商品管理</span></a></li>
     </ul>
   </div>
 </div>
@@ -53,10 +54,7 @@
       </ol>
   
       <!-- 4.echarts_box -->
-      <div class="echarts_box">
-          <div class="echarts_left pull-left"></div>
-          <div class="echarts_right pull-right"></div>
-      </div>
+     
     </div>
   </div>
 
@@ -87,6 +85,5 @@
   <script src="./lib/bootstrap/js/bootstrap.js"></script>
   <script src='./lib/bootstrap-validator/js/bootstrapValidator.js'></script>
   <script src='./js/common.js'></script>
-  <script src='./js/index.js'></script>
 </body>  
 </html>
