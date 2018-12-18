@@ -126,7 +126,7 @@
 
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-              <button type="button" class="btn btn-primary" id="logoutBtn">添加</button>
+              <button type="submit" class="btn btn-primary">添加</button>
             </div>
           </form>
           </div><!-- /.modal-content -->
@@ -155,7 +155,7 @@
 <!-- ul模板引擎 -->
   <script type="text/html" id="ulTemplate">
     {{each rows v i }}
-      <li><a href="#">{{v.categoryName}}</a></li>
+      <li><a data-id="{{v.id}}" href="#">{{v.categoryName}}</a></li>
     {{/each}}
   </script>
 

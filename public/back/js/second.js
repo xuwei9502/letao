@@ -13,7 +13,7 @@ $(function(){
         pageSize:pageSize
       },
       success:function(info){
-        console.log(info);
+        // console.log(info);
         // 1.动态渲染模板引擎
         var htmlStr=template("addTemplate",info);
         $("tbody").html(htmlStr);
@@ -56,12 +56,13 @@ $(function(){
       $(".dropdown").on('click',"a",function(){
           // 获取a的文本
           var txt = $(this).text();
+          
           // 设置给按钮
           $("#dropdownText").text(txt);
           // 获取a存的id 一级分类id
           var id = $(this).data("id");
           // 赋值给隐藏域（input:hidden）
-          $('[name="categroyId"]').val(id);
+          $('[name="categoryId"]').val(id);
           // 更新隐藏域的校验状态成校验成功
           $("#form").data("bootstrapValidator").updateStatus("categoryId","VALID")
       })
@@ -134,7 +135,7 @@ $(function(){
             success:function(info){
               if(info.success){
                   // 1.关闭模态框
-                  $("#addModal").modal("hidden");
+                  $("#addModal").modal("hide");
                   // 2.重新渲染第一页
                   currentPage=1;
                   render()
